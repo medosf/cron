@@ -10,12 +10,13 @@ const scrapeLinkedIn = async () => {
 
     // Select the elements with the job info
     const jobs = await page.evaluate(() => {
-        let jobList = Array.from(document.querySelectorAll('.result-card__contents'));
-        return jobList.map(job => ({
-            title: job.querySelector('.result-card__title').innerText,
-            company: job.querySelector('.result-card__subtitle-link').innerText,
-            location: job.querySelector('.result-card__location').innerText
-        }));
+        console.log('app starts and was able to visit the url')
+        // let jobList = Array.from(document.querySelectorAll('.result-card__contents'));
+        // return jobList.map(job => ({
+        //     title: job.querySelector('.result-card__title').innerText,
+        //     company: job.querySelector('.result-card__subtitle-link').innerText,
+        //     location: job.querySelector('.result-card__location').innerText
+        // }));
     });
 
     // Close the browser
