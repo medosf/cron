@@ -8,7 +8,7 @@ const sendSms = async(sendToNumber)=> {
     const date = new Date()
     try {
        const res =  await  client.messages.create({
-            body: `Hello from Node at ${date}`,
+            body: `Hello medo at ${date}, its a new month enjoy`,
             to: sendToNumber || '+14159880574',  // Replace with your phone number
             from: '+18663119127'
         })
